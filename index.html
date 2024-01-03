@@ -1,0 +1,38 @@
+<!doctype HTML>
+<html>
+<head>
+    <title></title>
+    <style>
+    
+    .ti {
+   font-family:"texas";
+   font-size:180%;
+   color:#000000; /* Use any color you prefer */
+}
+
+    
+    @font-face {
+   font-family: 'texas';
+   src: url('texas_instruments_ti84_series.ttf');
+}
+    </style>
+</head>
+<body>
+    <textarea class="ti"></textarea>
+    <button onclick="download_txt()">Save</button>
+    
+    <script>
+function download_txt() {
+ var textToSave = "Your variable contents";
+ var hiddenElement = document.createElement('a');
+
+ hiddenElement.href = 'data:attachment/text,' + encodeURI(textToSave);
+ hiddenElement.target = '_blank';
+ hiddenElement.download = 'myFile.txt';
+ hiddenElement.click();
+}
+
+
+    </script>
+</body>
+</html>
