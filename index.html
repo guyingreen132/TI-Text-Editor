@@ -3,17 +3,14 @@
 <head>
     <title></title>
     <style>
-    
-    .ti {
-   font-family:"texas";
-   font-size:180%;
-   color:#000000; /* Use any color you prefer */
+@font-face {
+   font-family: 'CustomFont';
+   src: url('textas') format('woff2'),
+        url('texas_instruments_ti84_series.ttf') format('ttf');
 }
 
-    
-    @font-face {
-   font-family: 'texas';
-   src: url('texas_instruments_ti84_series.ttf');
+textarea {
+   font-family: 'CustomFont', fallback, sans-serif;
 }
     </style>
 </head>
